@@ -1,0 +1,59 @@
+.slide img{
+  width:100%;
+  height: 700px;
+}
+.mid{
+  width: 100%;
+  height: 50px;
+  background-color: #373c44;
+  opacity: 0.5;
+}
+.project{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.project>.project00{
+  width: 215px;
+  height: 139px;
+  float: left;
+  background-color: #fa0509;
+  opacity:1;
+  border-radius: 5px;
+  margin: 4px;
+}
+.project>.project01{
+  width: 215px;
+  height: 139px;
+  float: left;
+  background-color: #20f602;
+  opacity: 1;
+  border-radius: 5px;
+      margin: 4px;
+}
+.project>.project02{
+  width: 215px;
+  height: 139px;
+  float: left;
+  background-color: #d5fc06;
+  opacity: 1;
+    border-radius: 5px;
+      margin: 4px;
+}
+.project>.project03{
+  color: black;
+  width: 215px;
+  height: 139px;
+  float: left;
+  background-color: #0641fc;
+  opacity: 1;
+    border-radius: 5px;
+      margin: 4px;
+}
+.project a{
+  display: block;
+  width: 150px;
+  margin:20px auto auto auto;
+  text-decoration: underline;;
+}

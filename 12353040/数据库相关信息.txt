@@ -1,0 +1,23 @@
+账号（邮箱号） 昵称（主键）  密码  
+create table user(email varchar(30), username varchar(30), password string(30));
+
+
+project_money
+（id 自增）
+id  支持项目代号  支持金额 支持人昵称
+create table project_money(id int(15) primary key, projectId int(15), money int(10), username varchar(30));
+
+CREATE TABLE `NewTable` (
+`id`  int(15) NOT NULL AUTO_INCREMENT ,
+`projectId`  int(15) NOT NULL ,
+`money`  int(10) NOT NULL ,
+`username`  varchar(30) NOT NULL ,
+PRIMARY KEY (`id`)
+)
+;
+item
+项目名称 项目代号 支持总额 支持人次
+create table item(projectId int(15) primay key,projectName varchar(40),sumMoney int(20),count int(15));
+
+INSERT INTO `item` (`projectId`, `projectName`, `sumMoney`, `count`) VALUES ('1', '雏鸟起飞', '0', '0')
+

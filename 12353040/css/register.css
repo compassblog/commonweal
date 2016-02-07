@@ -1,0 +1,47 @@
+.header{
+  width: 100%;
+  height: 50px;
+}
+.title h2{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  color: #8c8c8c;
+  border-bottom:1px dashed black;
+}
+.register form{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register p{
+  height: 30px;
+}
+.register form p input{
+  min-width: 200px;
+  height: 20px;
+  font-size: 14px;
+ color: #8c8c8c;
+ border-radius: 2px;
+ border: solid 1px;
+}
+.register .button{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register .button button{
+  background-color: #c7d102;
+  color: #fdfdff;
+  font-size: 15px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+}
+.result h2{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-bottom:1px solid black;
+}
