@@ -2,8 +2,6 @@
    import="java.util.*,java.sql.*,mylib.*"
    contentType="text/html; charset=UTF-8"
 %>
-
-
 <%
     //判断是否已经登陆
   String usernamec = null;
@@ -38,18 +36,18 @@
   System.out.println(projectId);
   System.out.println(project_id+"");
   if(project_id != -1 && CommonUtil.connect()){
-     String sqlSentence2 = String.format("select * from item where projectId = '%d' ",project_id);
-     System.out.println(sqlSentence2);
-     ResultSet rs = CommonUtil.executeQuery(sqlSentence2);
-     int i = 0;//查询没有返回结果的时候，需要用i来判断 rs.next()有没有结果
-     if(rs.next()){
-         i++;
-     }
-     if(i != 0){
-         sumMoney = rs.getInt("sumMoney");
-         System.out.println(sumMoney);
-         count = rs.getInt("count");
-    }
+      String sqlSentence2 = String.format("select * from item where projectId = '%d' ",project_id);
+      System.out.println(sqlSentence2);
+      ResultSet rs = CommonUtil.executeQuery(sqlSentence2);
+      int i = 0;//查询没有返回结果的时候，需要用i来判断 rs.next()有没有结果
+      if(rs.next()){
+          i++;
+      }
+      if(i != 0){
+          sumMoney = rs.getInt("sumMoney");
+          System.out.println(sumMoney);
+          count = rs.getInt("count");
+      } 
   }
   //记录捐款金额 并且 访问数据库，更新与之相关的两个表格
   if("2".equals(submit) && money != 0 && usernamec != null && project_id != -1 && CommonUtil.connect()){
@@ -154,21 +152,7 @@
             </form>
         </div>
         </div>
-        <!-- 页脚 相关申明信息 -->
-        <div class="footer">
-            <ul>
-                <li>关于公益众筹|</li>
-                <li>服务介绍|</li>
-                <li>隐私政策<li>
-            </ul>
-            <img src="../img/address.png">
-            </br clear="both">
-            <p>
-              &copy 2016 中山大学移动web小组　commonweal.com   版权所有
-            </br>
-               电信与信息服务业务经营许可证123456789号　粤ICP备123456789号　粤公网安备123456789
-            </p>
-        </div>
+        <jsp:include flush="true" page="footer.jsp"></jsp:include>
 
     </body>
     </html>

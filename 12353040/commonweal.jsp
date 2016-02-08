@@ -89,20 +89,6 @@
              <a href="project/project3.jsp">给***地区的人一些支援</a>
         </div>
      </div>
-     <!-- 页脚 相关申明信息 -->
-     <div class="footer">
-          <ul>
-              <li>关于公益众筹|</li>
-              <li>服务介绍|</li>
-              <li>隐私政策<li>
-          </ul>
-          <img src="img/address.png">
-          </br clear="both">
-          <p>
-              &copy 2016 中山大学移动web小组　commonweal.com   版权所有
-          </br>
-              电信与信息服务业务经营许可证123456789号　粤ICP备123456789号　粤公网安备123456789
-          </p>
-      </div>
+     <jsp:include flush="true" page="footer.jsp"></jsp:include>
 </body>
 </html>

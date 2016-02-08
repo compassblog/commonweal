@@ -2,7 +2,6 @@
    import="java.util.*,java.sql.*,java.net.URLEncoder,java.net.URLDecoder,mylib.*"
    contentType="text/html; charset=UTF-8"
     %>
-
   <%
         //登陆
         //判断是否有cookie 有的话从cookie中读取出来
@@ -52,16 +51,16 @@
   if(session.getAttribute("username") != null)
       usernamec = session.getAttribute("username").toString();
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<head>
-      <meta charset="utf-8">
-      <title>公益众筹登陆</title>
-      <style>
-      </style>
-      <link href="css/common.css" rel="stylesheet"> </link>
-      <link href="css/login.css" rel="stylesheet"> </link>
-</head>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>公益众筹登陆</title>
+        <style>
+        </style>
+        <link href="css/common.css" rel="stylesheet"> </link>
+        <link href="css/login.css" rel="stylesheet"> </link>
+  </head>
   <body>
       <!-- 导航栏-->
       <div class="menu">
@@ -92,54 +91,36 @@
               </div>
             </div>
       </div>
-<div class="header">
-</div>
-<div class="login">
- <div class="title">
-   <h2>登录</h2>
- </div>
- <form method="post" action="">
-   <p>
-  <input autocomplete="off" placeholder="输入昵称" name="user_name" value = "<%=usernameincookie %>"type="text">
-  </p>
-   <p>
-  <input autocomplete="off" placeholder="输入密码" name="password" value = "<%= passwordincookie %>"type="password">
-  </p>
+    <div class="header">
+    </div>
+    <div class="login">
+        <div class="title">
+            <h2>登录</h2>
+        </div>
+        <form method="post" action="">
+            <p>
+                <input autocomplete="off" placeholder="输入昵称" name="user_name" value = "<%=usernameincookie %>"type="text">
+            </p>
+            <p>
+                <input autocomplete="off" placeholder="输入密码" name="password" value = "<%= passwordincookie %>"type="password">
+            </p>
 
- <div class="button">
-       <button type="submit" name="submit1" value="1">登陆</button>
- </div>
- </form>
-</div>
-<div class="result">
-  <% if(success && "1".equals(submit)){
-     out.print("<h2>登陆成功!</h2>");
-     username = URLDecoder.decode(username,"UTF-8");
-     session.setAttribute("username",username);
-     response.sendRedirect("commonweal.jsp");
-     }
-   %>
-  <% if(!success && "1".equals(submit)) out.print("<h2>登陆失败!(昵称、密码不正确！)</h2>"); %>
-</div>
-<div class="footer">
-<ul>
-  <li>关于公益众筹|</li>
-  <li>服务介绍|</li>
-  <li>隐私政策<li>
-</ul>
-  <img src="img/address.png">
-</br clear="both">
-<p>
-  &copy 2016 中山大学移动web小组　commonweal.com   版权所有
-</br>
-电信与信息服务业务经营许可证123456789号　粤ICP备123456789号　粤公网安备123456789
-
-</p>
-
-</div>
-
-
-
+            <div class="button">
+                <button type="submit" name="submit1" value="1">登陆</button>
+            </div>
+        </form>
+    </div>
+    <div class="result">
+        <%
+          if(success && "1".equals(submit)){
+          out.print("<h2>登陆成功!</h2>");
+          username = URLDecoder.decode(username,"UTF-8");
+          session.setAttribute("username",username);
+          response.sendRedirect("commonweal.jsp");
+          }
+          if(!success && "1".equals(submit)) out.print("<h2>登陆失败!(昵称、密码不正确！)</h2>");
+       %>
+    </div>
+    <jsp:include flush="true" page="footer.jsp"></jsp:include>
 </body>
-
 </html>
